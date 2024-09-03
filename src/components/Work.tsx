@@ -2,26 +2,35 @@ import React from "react";
 import YouTube from "react-youtube";
 
 const Work: React.FC = () => {
-	const videoId = "rO9eqdwmwxg"; // Extracted from your YouTube link
+	const videoId = "rO9eqdwmwxg"; // First video
+	const nextVideoId = "dQw4w9WgXcQ"; // Next video
 
 	const opts = {
-		height: "100%",
+		height: "95%",
 		width: "100%",
 		playerVars: {
-			autoplay: 1, // Auto-play the video
+			autoplay: 1,
+			rel: 0, // Disable related videos at the end
+			controls: 1, // Show player controls (play, pause, progress bar)
 		},
+	};
+
+	// Function to handle video end event
+	const onEnd = (event: any) => {
+		event.target.loadVideoById(nextVideoId); // Load the next video
 	};
 
 	return (
 		<div
-			className="h-screen bg-danger flex items-center justify-center"
+			className="h-screen bg-black flex items-center justify-center"
 			id="work"
 		>
 			<div className="w-full h-full border-2 border-accent">
 				<YouTube
 					className="w-full h-full rounded-lg shadow-lg"
-					videoId={videoId}
+					videoId={videoId} // Start with the first video
 					opts={opts}
+					onEnd={onEnd} // Handle video end event
 				/>
 			</div>
 		</div>
