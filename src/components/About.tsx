@@ -35,7 +35,7 @@ const About: React.FC = () => {
 			</div>
 			<div className="md:w-1/3 w-full p-4">
 				<img
-					src="/public/profile_pic.jpg"
+					src="/profile_pic.jpg"
 					alt="Profile"
 					className="w-full h-auto rounded-lg shadow-lg"
 				/>

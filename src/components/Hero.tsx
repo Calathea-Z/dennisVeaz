@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
 		<div
 			id="hero"
 			className="bg-cover bg-center h-screen flex flex-col items-start p-8 md:p-20"
-			style={{ backgroundImage: "url('/public/stock_music_hero.jpg')" }}
+			style={{ backgroundImage: "url('/stock_music_hero.jpg')" }}
 		>
 			<h1 className="text-white text-6xl md:text-8xl font-bold mb-4">
 				DENBY VZY
