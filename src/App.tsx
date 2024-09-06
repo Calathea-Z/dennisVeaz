@@ -5,6 +5,8 @@ import Sidebar from "./components/SideBar";
 import TopBar from "./components/TopBar";
 import { BrowserRouter as Router } from "react-router-dom";
 import Work from "./components/Work";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -21,7 +23,9 @@ function App() {
 						<Hero />
 						<About />
 						<Work />
+						<Contact />
 					</main>
+					<Footer />
 				</div>
 			</div>
 		</Router>
