@@ -1,0 +1,7 @@
+$rhap-theme-color: #F6DCAC !default; // Color of all buttons and volume/progress indicators
+$rhap-background-color: #F85525 !default; // Color of the player background
+$rhap-bar-color: #ffffff !default; // Color of volume and progress bar
+$rhap-time-color: #F6DCAC!default; // Font color of current time and duration
+$rhap-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !default; // Font family of current time and duration
+
+@import 'react-h5-audio-player/src/styles.scss';

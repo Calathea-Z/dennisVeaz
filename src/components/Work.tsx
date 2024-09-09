@@ -9,9 +9,9 @@ const Work: React.FC = () => {
 		height: "95%",
 		width: "100%",
 		playerVars: {
-			autoplay: 1,
-			rel: 0, // Disable related videos at the end
-			controls: 1, // Show player controls (play, pause, progress bar)
+			autoplay: 0,
+			rel: 0,
+			controls: 1,
 		},
 	};
 

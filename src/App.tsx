@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import MusicPlayer from "./components/MusicPlayer";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 						<TopBar />
 					</div>
 					<main>
+						<MusicPlayer />
 						<Hero />
 						<About />
 						<Work />
