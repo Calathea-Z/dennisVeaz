@@ -2,9 +2,9 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Footer: React.FC = () => {
 	return (
-		<footer className="bg-primary text-white p-4 flex justify-between items-center">
+		<footer className="bg-stone-900 p-4 flex justify-between items-center">
 			<ScrollLink to="hero" smooth={true} duration={500}>
-				<button className="bg-accent hover:bg-highlight text-black text-sm font-bold py-1 px-2 rounded">
+				<button className="bg-white hover:bg-highlight text-black text-sm font-bold py-1 px-2 rounded">
 					Back to Top
 				</button>
 			</ScrollLink>
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 				href="https://www.zach-sykes.com"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="text-sm hover:bg-highlight"
+				className="text-sm hover:bg-accent p-2 rounded-md hover:text-black"
 			>
 				Website by Calathea Designs
 			</a>

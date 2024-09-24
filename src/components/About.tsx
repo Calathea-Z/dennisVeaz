@@ -28,7 +28,7 @@ const About: React.FC = () => {
 					</p>
 				</blockquote>
 			</div>
-			<div className="md:w-1/3 w-full p-4">
+			<div className="md:w-1/3 w-full p-10">
 				<img
 					src="/profile_pic.jpg"
 					alt="Profile"

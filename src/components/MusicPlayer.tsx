@@ -16,11 +16,37 @@ const MusicPlayer: React.FC = () => {
 
 	const tracks = [
 		{
-			name: "BitBoy and the Eight Flames",
-			src: "music/BitBoy and the Eight Flames.wav",
+			name: "Sequential",
+			src: "/music/Sequential.mp3",
 		},
-		{ name: "Track 2", src: "/music/track2.mp3" },
-		{ name: "Track 3", src: "/music/track3.mp3" },
+		{
+			name: "Crystal Refinery",
+			src: "/music/Crystal_Refinery.mp3",
+		},
+		{
+			name: "Reflexes",
+			src: "/music/Reflexes.mp3",
+		},
+		{
+			name: "Theme from 'Hero to Villain'",
+			src: "/music/Theme_From_Hero_To_Villain.mp3",
+		},
+		{
+			name: "If a Mouse Gives you a Cookie",
+			src: "/music/If_a_Mouse_Gives_You_a_Cookie.mp3",
+		},
+		{
+			name: "1000 dollar battlepass",
+			src: "/music/1000_Dollar_Battlepass.mp3",
+		},
+		{
+			name: "Jungle Robot Baby Playtime Center",
+			src: "/music/Jungle_Robot_Baby_Playtime_Center.mp3",
+		},
+		{
+			name: "Robot Lullaby",
+			src: "/music/Robot_Lullaby.mp3",
+		},
 	];
 
 	const togglePlayer = () => {

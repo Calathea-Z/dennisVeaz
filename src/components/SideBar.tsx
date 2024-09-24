@@ -81,7 +81,7 @@ const Sidebar: React.FC = () => {
 					}`}
 				>
 					<WaveSawtooth size={iconSize} className="mr-2 hidden lg:inline" />
-					<span>Work</span>
+					<span>Music</span>
 				</ScrollLink>
 				<ScrollLink
 					to="contact"
