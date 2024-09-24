@@ -10,26 +10,21 @@ const About: React.FC = () => {
 				<h2 className="text-4xl md:text-7xl font-bold mb-6">About Me</h2>
 				<blockquote className="text-lg mb-4 border-l-4 border-accent pl-4 italic leading-loose">
 					<p className="text-4xl mb-4">
-						"Yo, I'm a music producer who totally rocks at making some wild and
-						wacky soundscapes. I've been in the biz for like, over a decade,
-						crafting everything from epic film scores to video game jams. But
-						don't get it twisted—I still find time to absolutely wreck some
-						noobs in Overwatch, especially when I'm rolling as D.Va. Could've
-						hit diamond rank, but you know, I like to keep it casual and just
-						have fun. Used to be all about Umphrey's McGee, but now I'm vibing
-						with some serious DEADMAU5 energy. I could shred on guitar, but
-						honestly, I just let my computer do the heavy lifting these days.
-						And when it comes to laying down tracks, I can go from yoga hot abb
-						rock to ABBA, Hall and Oates to concert hall and concertos. Looking
-						forward to blasting some ear holes later!"
+						From the age of 4, when Dennis first sat down at his grandmother's
+						organ, music has been his lifelong passion. This early start paved
+						the way for years of exploration, from touring in bands to composing
+						intricate soundscapes for video games. His musical influences span a
+						diverse range—from the improvisational energy of jam bands to the
+						complex harmonies of jazz and the timeless beauty of classical
+						music.
 					</p>
 					<p className="text-3xl">
-						"When I'm not laying down sick beats, I'm deep into the gaming
-						world. I love finding new games, pwning fellow gamers, and just
-						vibing with the community. For me, music and gaming are like peanut
-						butter and jelly—they just go together. My mission? To crank up the
-						audio experience in games and take the whole vibe to the next
-						level!"
+						In the realm of video game music, he draws inspiration from modern
+						composers like Lena Raine and Wilbert Roget, II, while paying homage
+						to the classics created by legends such as Koji Kondo and David
+						Wise. With every project, his goal is to craft immersive and
+						memorable soundtracks that resonate with players long after the game
+						is over.
 					</p>
 				</blockquote>
 			</div>
