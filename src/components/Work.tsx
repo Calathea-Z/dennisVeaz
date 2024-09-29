@@ -12,47 +12,47 @@ const Work: React.FC = () => {
 		{
 			name: "Sequential",
 			src: "/music/Sequential.mp3",
-			duration: "3:45",
+			duration: "2:52",
 		},
 		{
 			name: "Crystal Refinery",
 			src: "/music/Crystal_Refinery.mp3",
-			duration: "4:20",
+			duration: "3:04",
 		},
 		{
 			name: "Seven Puddles",
 			src: "/music/The Seven Puddles (Maiden Voyage of a Mouse).mp3",
-			duration: "5:30",
+			duration: "2:16",
 		},
 		{
 			name: "Reflexes",
 			src: "/music/Reflexes.mp3",
-			duration: "2:58",
+			duration: "2:14",
 		},
 		{
 			name: "Theme from 'Hero to Villain'",
 			src: "/music/Theme _From _Hero_ To_ Villain.mp3",
-			duration: "3:15",
+			duration: "3:18",
 		},
 		{
 			name: "If a Mouse Gives you a Cookie",
 			src: "/music/If_a_ Mouse_ Gives_ You_ a_ Cookie.mp3",
-			duration: "3:05",
+			duration: "2:16",
 		},
 		{
 			name: "1000 dollar battlepass",
 			src: "/music/1000_Dollar_ Battlepass.mp3",
-			duration: "4:00",
+			duration: "2:49",
 		},
 		{
 			name: "Jungle Robot Baby Playtime Center",
 			src: "/music/Jungle_ Robot_ Baby_ Playtime_ Center.mp3",
-			duration: "3:50",
+			duration: "2:28",
 		},
 		{
 			name: "Robot Lullaby",
 			src: "/music/Robot_Lullaby.mp3",
-			duration: "2:45",
+			duration: "3:45",
 		},
 	];
 
