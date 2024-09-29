@@ -3,6 +3,7 @@ import {
 	WaveSawtooth,
 	WaveSine,
 	WaveTriangle,
+	YoutubeLogo,
 } from "@phosphor-icons/react";
 import { Link as ScrollLink } from "react-scroll";
 import { useState, useEffect } from "react";
@@ -15,7 +16,7 @@ const Sidebar: React.FC = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const sections = ["hero", "about", "work", "contact"];
+			const sections = ["hero", "about", "work", "contact", "youtube"];
 			const scrollPosition = window.scrollY + window.innerHeight / 2;
 
 			for (const section of sections) {
@@ -42,13 +43,13 @@ const Sidebar: React.FC = () => {
 	}, [location]);
 
 	return (
-		<nav className="bg-secondary h-full w-full md:w-[10%] fixed">
+		<nav className="bg-secondary h-full w-full md:w-[10%] fixed border-r-[1.2px] border-white bg-opacity-70 backdrop-blur-lg">
 			<div className="flex flex-col items-center justify-start h-full space-y-4 pt-8">
 				<ScrollLink
 					to="hero"
 					smooth={true}
 					duration={500}
-					className={`text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
+					className={`text-base xl:text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
 						currentSection === "hero"
 							? "text-accent"
 							: "text-white hover:text-accent"
@@ -61,7 +62,7 @@ const Sidebar: React.FC = () => {
 					to="about"
 					smooth={true}
 					duration={500}
-					className={`text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
+					className={`text-base xl:text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
 						currentSection === "about"
 							? "text-accent"
 							: "text-white hover:text-accent"
@@ -74,7 +75,7 @@ const Sidebar: React.FC = () => {
 					to="work"
 					smooth={true}
 					duration={500}
-					className={`text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
+					className={`text-base xl:text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
 						currentSection === "work"
 							? "text-accent"
 							: "text-white hover:text-accent"
@@ -84,10 +85,23 @@ const Sidebar: React.FC = () => {
 					<span>Music</span>
 				</ScrollLink>
 				<ScrollLink
+					to="youtube"
+					smooth={true}
+					duration={500}
+					className={`text-base xl:text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
+						currentSection === "youtube"
+							? "text-accent"
+							: "text-white hover:text-accent"
+					}`}
+				>
+					<YoutubeLogo size={iconSize} className="mr-2 hidden lg:inline" />
+					<span>Videos</span>
+				</ScrollLink>
+				<ScrollLink
 					to="contact"
 					smooth={true}
 					duration={500}
-					className={`text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
+					className={`text-base xl:text-lg font-bold flex items-center whitespace-nowrap cursor-pointer ${
 						currentSection === "contact"
 							? "text-accent"
 							: "text-white hover:text-accent"

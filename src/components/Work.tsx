@@ -20,6 +20,11 @@ const Work: React.FC = () => {
 			duration: "4:20",
 		},
 		{
+			name: "Seven Puddles",
+			src: "/music/The Seven Puddles (Maiden Voyage of a Mouse).mp3",
+			duration: "5:30",
+		},
+		{
 			name: "Reflexes",
 			src: "/music/Reflexes.mp3",
 			duration: "2:58",
