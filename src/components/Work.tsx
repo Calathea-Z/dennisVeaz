@@ -66,12 +66,10 @@ const Work: React.FC = () => {
 
 	const handlePlay = () => {
 		setIsPlaying(true);
-		console.log("Playing");
 	};
 
 	const handlePause = () => {
 		setIsPlaying(false);
-		console.log("Paused");
 	};
 	return (
 		<div
