@@ -8,6 +8,7 @@ import {
 import { Link as ScrollLink } from "react-scroll";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Sidebar: React.FC = () => {
 	const iconSize = 24; // Reduced the icon size from 32 to 24
@@ -42,6 +43,16 @@ const Sidebar: React.FC = () => {
 		};
 	}, [location]);
 
+	const tilt = {
+		hover: {
+			rotate: [0, 1, -1, 1, -1, 0],
+			transition: {
+				duration: 1,
+				ease: "easeInOut",
+			},
+		},
+	};
+
 	return (
 		<nav className="bg-secondary h-full w-full md:w-[10%] fixed border-r-[1.2px] border-white bg-opacity-70 backdrop-blur-lg">
 			<div className="flex flex-col items-center justify-start h-full space-y-4 pt-8">
@@ -56,7 +67,9 @@ const Sidebar: React.FC = () => {
 					}`}
 				>
 					<Guitar size={iconSize} className="mr-2 hidden lg:inline" />
-					<span>Home</span>
+					<motion.span variants={tilt} whileHover="hover">
+						Home
+					</motion.span>
 				</ScrollLink>
 				<ScrollLink
 					to="about"
@@ -69,7 +82,9 @@ const Sidebar: React.FC = () => {
 					}`}
 				>
 					<WaveSine size={iconSize} className="mr-2 hidden lg:inline" />
-					<span>About</span>
+					<motion.span variants={tilt} whileHover="hover">
+						About
+					</motion.span>
 				</ScrollLink>
 				<ScrollLink
 					to="work"
@@ -82,7 +97,9 @@ const Sidebar: React.FC = () => {
 					}`}
 				>
 					<WaveSawtooth size={iconSize} className="mr-2 hidden lg:inline" />
-					<span>Music</span>
+					<motion.span variants={tilt} whileHover="hover">
+						Music
+					</motion.span>
 				</ScrollLink>
 				<ScrollLink
 					to="youtube"
@@ -95,7 +112,9 @@ const Sidebar: React.FC = () => {
 					}`}
 				>
 					<YoutubeLogo size={iconSize} className="mr-2 hidden lg:inline" />
-					<span>Videos</span>
+					<motion.span variants={tilt} whileHover="hover">
+						Videos
+					</motion.span>
 				</ScrollLink>
 				<ScrollLink
 					to="contact"
@@ -108,7 +127,9 @@ const Sidebar: React.FC = () => {
 					}`}
 				>
 					<WaveTriangle size={iconSize} className="mr-2 hidden lg:inline" />
-					<span>Contact</span>
+					<motion.span variants={tilt} whileHover="hover">
+						Contact
+					</motion.span>
 				</ScrollLink>
 			</div>
 		</nav>

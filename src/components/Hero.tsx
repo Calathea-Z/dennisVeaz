@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
 				COMPOSER & MUSIC PRODUCER
 			</p>
 			<ScrollLink to="about" smooth={true} duration={500}>
-				<button className="bg-accent hover:bg-danger text-black text-lg md:text-xl font-bold py-2 px-4 rounded">
+				<button className="bg-accent hover:bg-danger text-black hover:text-white text-lg md:text-xl font-bold py-2 px-4 rounded">
 					Learn More
 				</button>
 			</ScrollLink>

@@ -44,24 +44,24 @@ const Contact: React.FC = () => {
 						<input
 							type="text"
 							name="user_name"
-							className="p-2 border border-gray-300 rounded-md bg-zinc-50"
+							className="p-2 border border-gray-300 rounded-md bg-stone-800 text-white"
 						/>
 						<label className="text-lg">Email</label>
 						<input
 							type="email"
 							name="user_email"
-							className="p-2 border border-gray-300 rounded-md bg-zinc-50"
+							className="p-2 border border-gray-300 rounded-md bg-stone-800 text-white"
 						/>
 						<label className="text-lg">Message</label>
 						<textarea
 							name="message"
-							className="p-2 border border-gray-300 rounded-md bg-zinc-50"
+							className="p-2 border border-gray-300 rounded-md bg-stone-800 text-white"
 						/>
 						<div className="flex justify-end">
 							<input
 								type="submit"
 								value="Send"
-								className="p-2 bg-highlight hover:scale-105 transform transition-transform duration-200 text-white text-xl rounded-md cursor-pointer w-full md:w-1/5"
+								className="p-2 bg-accent hover:scale-105 hover:bg-danger/90 hover:text-white transform transition-transform duration-200 text-black text-xl rounded-md cursor-pointer w-full md:w-1/5"
 							/>
 						</div>
 					</form>
@@ -88,12 +88,14 @@ const Contact: React.FC = () => {
 							url="https://youtube.com/@denbitmusic?si=f5CcmLVMxMirPDGU"
 							style={{ height: 100, width: 100 }}
 							target="_blank"
+							className="transition-transform transform hover:scale-105"
 						/>
 						<SocialIcon
 							url="https://www.instagram.com/denbitmusic?igsh=MXR0Y2g2M3NmMTFxdg=="
 							style={{ height: 100, width: 100 }}
 							target="_blank"
 							bgColor="#028391"
+							className="transition-transform transform hover:scale-105"
 						/>
 					</div>
 				</div>
