@@ -1,28 +1,45 @@
-import { useRef, FormEvent } from "react";
+import { useRef, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SocialIcon } from "react-social-icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
 	const form = useRef<HTMLFormElement>(null);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
-	const sendEmail = (e: FormEvent) => {
+	const sendEmail = async (e: FormEvent) => {
 		e.preventDefault();
+		setIsSubmitting(true);
 
-		emailjs
-			.sendForm(
-				import.meta.env.EMAIL_JS_SERVICE_ID,
-				import.meta.env.EMAIL_JS_TEMPLATE_ID,
+		const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
+		const templateId = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
+		const publicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
+
+		if (!serviceId || !templateId || !publicKey) {
+			console.error("EmailJS configuration is missing.");
+			setIsSubmitting(false);
+			return;
+		}
+
+		try {
+			const result = await emailjs.sendForm(
+				serviceId,
+				templateId,
 				form.current as HTMLFormElement,
-				import.meta.env.EMAIL_JS_PUBLIC_KEY
-			)
-			.then(
-				(result: { text: string }) => {
-					console.log(result.text);
-				},
-				(error: { text: string }) => {
-					console.log(error.text);
-				}
+				publicKey
 			);
+			console.log(result.text);
+			if (form.current) {
+				form.current.reset();
+			}
+			toast.success("Message sent!");
+		} catch (error) {
+			console.error("Failed to send email:", error);
+			toast.error("Failed to send message.");
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -30,6 +47,7 @@ const Contact: React.FC = () => {
 			className="min-h-screen bg-stone-900 flex flex-col items-center p-4 md:p-8"
 			id="contact"
 		>
+			<ToastContainer />
 			<div className="w-full md:w-3/4 p-4 text-left flex flex-col md:flex-row">
 				<div className="w-full md:w-3/4 p-4">
 					<h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -58,11 +76,13 @@ const Contact: React.FC = () => {
 							className="p-2 border border-gray-300 rounded-md bg-stone-800 text-white"
 						/>
 						<div className="flex justify-end">
-							<input
+							<button
 								type="submit"
-								value="Send"
+								disabled={isSubmitting}
 								className="p-2 bg-accent hover:scale-105 hover:bg-danger/90 hover:text-white transform transition-transform duration-200 text-black text-xl rounded-md cursor-pointer w-full md:w-1/5"
-							/>
+							>
+								{isSubmitting ? "Sending..." : "Send"}
+							</button>
 						</div>
 					</form>
 				</div>
