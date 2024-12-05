@@ -25,6 +25,11 @@ const Work: React.FC = () => {
 			duration: "2:16",
 		},
 		{
+			name: "Brush of Fresh Air",
+			src: "/music/Brush of Fresh Air.mp3",
+			duration: "5:05",
+		},
+		{
 			name: "Reflexes",
 			src: "/music/Reflexes.mp3",
 			duration: "2:14",
