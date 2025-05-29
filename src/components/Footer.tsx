@@ -9,12 +9,12 @@ const Footer: React.FC = () => {
 				</button>
 			</ScrollLink>
 			<a
-				href="https://www.zach-sykes.com"
+				href="https://www.calathea.design"
 				target="_blank"
 				rel="noopener noreferrer"
 				className="text-sm hover:bg-accent p-2 rounded-md hover:text-black"
 			>
-				Website by Calathea Designs
+				Website by Calathea Web Design
 			</a>
 		</footer>
 	);
