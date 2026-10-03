@@ -7,12 +7,10 @@ import {
 } from "@phosphor-icons/react";
 import { Link as ScrollLink } from "react-scroll";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Sidebar: React.FC = () => {
 	const iconSize = 24; // Reduced the icon size from 32 to 24
-	const location = useLocation();
 	const [currentSection, setCurrentSection] = useState("");
 
 	useEffect(() => {
@@ -41,7 +39,7 @@ const Sidebar: React.FC = () => {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, [location]);
+	}, []);
 
 	const tilt = {
 		hover: {
